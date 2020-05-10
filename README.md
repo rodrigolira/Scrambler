@@ -1,6 +1,6 @@
 # Scrambler
 
-![build](https://github.com/rodrigolira/Scrambler/workflows/build/badge.svg?branch=master) [![Scrambler-pre-release](https://img.shields.io/nuget/vpre/Scrambler?maxAge=3600&label=Scrambler%20Pre-Release%20nuget)](https://www.nuget.org/packages/Scrambler/)
+![build](https://github.com/rodrigolira/Scrambler/workflows/build/badge.svg?branch=master) [![Scrambler-stable](https://img.shields.io/nuget/v/Scrambler?maxAge=3600&label=Scrambler%20nuget)](https://www.nuget.org/packages/Scrambler/)
 
 Scrambler is an utility class to encode/decode an integer into/from an unrecognizable string. It is useful when you're working in a system where you hand an id of some sort to the end user and that id happens to be an integer autoincrement primary key of your relational database entity.
 
