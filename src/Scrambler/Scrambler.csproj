@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Rodrigo Lira</Authors>
+    <Description>Scrambler is an utility class to encode/decode an integer into/from an unrecognizable string.</Description>
+    <PackageProjectUrl>https://github.com/rodrigolira/Scrambler</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rodrigolira/Scrambler</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
