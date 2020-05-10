@@ -7,6 +7,14 @@
     <Description>Scrambler is an utility class to encode/decode an integer into/from an unrecognizable string.</Description>
     <PackageProjectUrl>https://github.com/rodrigolira/Scrambler</PackageProjectUrl>
     <RepositoryUrl>https://github.com/rodrigolira/Scrambler</RepositoryUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
