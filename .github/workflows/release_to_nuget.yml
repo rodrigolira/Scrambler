@@ -53,6 +53,6 @@ jobs:
           dotnet-vesion: 3.1.100
 
       - name: Publish NuGet Packages
-        run: dotnet nuget push -k $NUGET_AUTH_TOKEN ./nupkg/*.nupkg --skip-duplicate
+        run: dotnet nuget push -s -s https://api.nuget.org/v3/index.json -k $NUGET_AUTH_TOKEN ./nupkg/*.nupkg --skip-duplicate
         env:
           NUGET_AUTH_TOKEN: ${{ secrets.NUGET_ORG_SCRAMBLER_KEY }}
