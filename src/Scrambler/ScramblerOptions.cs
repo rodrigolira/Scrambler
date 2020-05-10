@@ -9,6 +9,7 @@ namespace Scrambler
     /// </summary>
     public class ScramblerOptions
     {
+        private const int XorMinValue = 0;
         private const int XorMaxValue = 0x7fffffff;
         private const int ShiftMinValue = 1;
         private const int ShiftMaxValue = 31;
@@ -28,13 +29,13 @@ namespace Scrambler
         public ScramblerOptions(int xor1, int shift1, int xor2, int shift2, int xor3,
             int shift3, int hashXor, int hashShift, int hashPrefixLength)
         {
-            if (xor1 > XorMaxValue) throw new ArgumentException($"'{nameof(xor1)}' cannot exceed {XorMaxValue}");
-            if (xor2 > XorMaxValue) throw new ArgumentException($"'{nameof(xor2)}' cannot exceed {XorMaxValue}");
-            if (xor3 > XorMaxValue) throw new ArgumentException($"'{nameof(xor3)}' cannot exceed {XorMaxValue}");
-            if (shift1 > ShiftMaxValue || shift1 < ShiftMinValue) throw new ArgumentException($"'{nameof(shift1)}' cannot exceed {ShiftMaxValue}");
-            if (shift2 > ShiftMaxValue || shift2 < ShiftMinValue) throw new ArgumentException($"'{nameof(shift2)}' cannot exceed {ShiftMaxValue}");
-            if (shift3 > ShiftMaxValue || shift3 < ShiftMinValue) throw new ArgumentException($"'{nameof(shift3)}' cannot exceed {ShiftMaxValue}");
-            if (hashShift > ShiftMaxValue || hashShift < ShiftMinValue) throw new ArgumentException($"'{nameof(hashShift)}' cannot exceed {ShiftMaxValue}");
+            if (xor1 < XorMinValue || xor1 > XorMaxValue) throw new ArgumentException($"'{nameof(xor1)}' must be a value between { XorMinValue } and {XorMaxValue}");
+            if (xor2 < XorMinValue || xor2 > XorMaxValue) throw new ArgumentException($"'{nameof(xor2)}' must be a value between { XorMinValue } and {XorMaxValue}");
+            if (xor3 < XorMinValue || xor3 > XorMaxValue) throw new ArgumentException($"'{nameof(xor3)}' must be a value between { XorMinValue } and {XorMaxValue}");
+            if (shift1 < ShiftMinValue || shift1 > ShiftMaxValue) throw new ArgumentException($"'{nameof(shift1)}' must be a value between { ShiftMinValue } and {ShiftMaxValue}");
+            if (shift2 < ShiftMinValue || shift2 > ShiftMaxValue) throw new ArgumentException($"'{nameof(shift2)}' must be a value between { ShiftMinValue } and {ShiftMaxValue}");
+            if (shift3 < ShiftMinValue || shift3 > ShiftMaxValue) throw new ArgumentException($"'{nameof(shift3)}' must be a value between { ShiftMinValue } and {ShiftMaxValue}");
+            if (hashShift < ShiftMinValue || hashShift > ShiftMaxValue) throw new ArgumentException($"'{nameof(hashShift)}' must be a value between { ShiftMinValue } and {ShiftMaxValue}");
 
             _xor1 = xor1;
             _xor2 = xor2;
