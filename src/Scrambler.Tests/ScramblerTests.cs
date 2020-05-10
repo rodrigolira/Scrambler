@@ -5,6 +5,8 @@ namespace Scrambler.Tests
 {
     public class ScramblerTests
     {
+        private const int NumberOfExecutions = 1000000;
+
         [Fact]
         public void EncodedTextEqualsToDecodedNumber()
         {
@@ -24,7 +26,7 @@ namespace Scrambler.Tests
 
                 Assert.Equal(decodedNumber, originalNumber);
 
-            } while (++timesExecuted < 100000);
+            } while (++timesExecuted < NumberOfExecutions);
         }
     }
 }
