@@ -51,6 +51,10 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-vesion: 3.1.100
+          source-url: https://api.nuget.org/v3/index.json
+          owner: rodrigolira
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.NUGET_ORG_SCRAMBLER_KEY }}
 
       - name: Publish NuGet Packages
         run: dotnet nuget push -s -s https://api.nuget.org/v3/index.json -k $NUGET_AUTH_TOKEN ./nupkg/*.nupkg --skip-duplicate
